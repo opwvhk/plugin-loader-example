@@ -20,9 +20,7 @@ public class Main {
 		Plugins plugins = new Plugins(pluginPath, ExamplePlugin.class);
 
 		System.out.println("Plugins found:");
-		for (Plugin plugin : plugins.getPlugins()) {
-			System.out.printf("- %s%n", plugin.getName());
-		}
+		plugins.getPlugins().stream().map(Plugin::getName).sorted().forEach(pluginName -> System.out.printf("- %s%n", pluginName));
 		System.out.println();
 
 		System.out.println("Plugin greeters found:");

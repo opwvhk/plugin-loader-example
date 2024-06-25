@@ -30,8 +30,8 @@ class MainTest {
 
 		assertThat(stdout.capturedString()).isEqualTo("""
 				Plugins found:
-				- target
 				- src
+				- target
 
 				Plugin greeters found:
 				- Test case (v1.0.0)
